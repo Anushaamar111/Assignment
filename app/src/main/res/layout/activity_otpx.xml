@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="15dp"
+tools:context=".OTPx">
+
+<ImageView
+    android:id="@+id/imageView"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginStart="25dp"
+    android:layout_marginTop="216dp"
+    android:layout_marginEnd="25dp"
+    android:layout_marginBottom="83dp"
+    android:background="@drawable/otp_bg"
+    app:layout_constraintBottom_toTopOf="@+id/otpTV"
+    app:layout_constraintEnd_toEndOf="@+id/sendOTPbtn"
+    app:layout_constraintStart_toStartOf="@+id/sendOTPbtn"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<Button
+    android:id="@+id/sendOTPbtn"
+    android:layout_width="150dp"
+    android:layout_height="50dp"
+    android:layout_marginStart="114dp"
+    android:layout_marginEnd="116dp"
+    android:layout_marginBottom="49dp"
+    android:text="Send OTP"
+    app:layout_constraintBottom_toTopOf="@+id/progressBar"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@+id/otpTV"
+    app:layout_constraintTop_toBottomOf="@+id/otpTV" />
+
+<EditText
+    android:id="@+id/otpTV"
+    android:layout_width="0dp"
+    android:layout_height="50dp"
+    android:layout_marginStart="26dp"
+    android:layout_marginEnd="26dp"
+    android:layout_marginBottom="38dp"
+    android:hint="Enter phone number"
+    android:textColorHint="@color/black"
+    app:layout_constraintBottom_toTopOf="@+id/sendOTPbtn"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+<ProgressBar
+    android:id="@+id/progressBar"
+    android:layout_width="70dp"
+    android:layout_height="50dp"
+    android:layout_marginBottom="40dp"
+    app:layout_constraintBottom_toTopOf="@+id/resendTV"
+    app:layout_constraintEnd_toEndOf="@+id/sendOTPbtn"
+    app:layout_constraintStart_toStartOf="@+id/sendOTPbtn"
+    app:layout_constraintTop_toBottomOf="@+id/sendOTPbtn" />
+
+<TextView
+    android:id="@+id/resendTV"
+    android:layout_width="0dp"
+    android:layout_height="50dp"
+    android:layout_marginStart="13dp"
+    android:layout_marginEnd="13dp"
+    android:layout_marginBottom="25dp"
+    android:text="Resend OTP "
+    android:textAlignment="center"
+    android:textColor="@color/black"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@+id/otpTV"
+    app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
